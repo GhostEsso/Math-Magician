@@ -1,9 +1,9 @@
 import './Calculator.css';
 import CalApp from './CallApp';
 
-const Calculator = () => (
-  <CalApp />
-);
+function Calculator() {
+  return <CalApp />;
+}
 Calculator.defaultProps = {
   num: 0,
 };
