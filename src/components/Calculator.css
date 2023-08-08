@@ -21,7 +21,7 @@
 
 .row input[type="button"] {
   flex: 1;
-  border: 0.5px solid rgb(28, 120, 177);
+  border: 0.5px solid rgb(193, 207, 216);
   color: #000;
   font-weight: 600;
 }
@@ -58,9 +58,9 @@
 }
 
 .row .input:first-child {
-  background-color: rgb(2, 49, 35);
+  background-color: rgb(122, 129, 127);
 }
 
 .row input:last-child {
-  background-color: rgb(198, 248, 80);
+  background-color: rgb(233, 174, 13);
 }
