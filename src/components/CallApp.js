@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import calculate from '../deduction/calculate';
+import calculate from '../logic/calculate';
 
 function CalApp() {
   const [val, setval] = useState({
