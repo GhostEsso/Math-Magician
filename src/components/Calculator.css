@@ -8,8 +8,9 @@
   display: flex;
   flex-direction: column;
   width: 45%;
-  height: 60vh;
+  height: 50vh;
   margin: 25vh 25vw;
+  box-shadow: 0 0 10px rgba(143, 133, 133, 0.726);
 }
 
 .row {
@@ -22,7 +23,7 @@
 .row input[type="button"] {
   flex: 1;
   border: 0.5px solid rgb(193, 207, 216);
-  color: #000;
+  color: #050000;
   font-weight: 600;
 }
 
