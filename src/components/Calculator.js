@@ -16,8 +16,10 @@ function Calculator() {
   };
 
   return (
-    <CalApp val={val}
-     onButtonClick={handleCalculation} />
+    <CalApp
+      val={val}
+      onButtonClick={handleCalculation}
+    />
   );
 }
 
