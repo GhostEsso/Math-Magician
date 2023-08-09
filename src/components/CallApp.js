@@ -1,22 +1,18 @@
-import { useState } from 'react';
-import calculate from '../logic/calculate';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function CalApp() {
-  const [val, setval] = useState({
-    total: null,
-    next: null,
-    operation: null,
-  });
+function CalApp({ val, onButtonClick }) {
+  const { total, next, operation } = val;
+
   const calcs = (e) => {
     const Newvalue = e.target.value;
-    const evaluate = calculate(val, Newvalue);
-    setval(evaluate);
+    onButtonClick(Newvalue);
   };
-  const { total, next, operation } = val;
+
   return (
     <section className="Calc-container">
       <div className="row">
-        <h2 className="input">{!total && !next && !operation ? 0 : [total, operation, next]}</h2>
+        <h2 className="input">{!total && !next && !operation ? 0 : `${total} ${operation} ${next}`}</h2>
       </div>
       <div className="row">
         <input type="button" value="AC" onClick={calcs} />
@@ -50,4 +46,14 @@ function CalApp() {
     </section>
   );
 }
+
+CalApp.propTypes = {
+  val: PropTypes.shape({
+    total: PropTypes.string,
+    next: PropTypes.string,
+    operation: PropTypes.string,
+  }).isRequired,
+  onButtonClick: PropTypes.func.isRequired,
+};
+
 export default CalApp;
