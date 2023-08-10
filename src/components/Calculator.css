@@ -65,3 +65,10 @@
 .row input:last-child {
   background-color: rgb(233, 174, 13);
 }
+
+.Quotes {
+  padding: 5% 20%;
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+
