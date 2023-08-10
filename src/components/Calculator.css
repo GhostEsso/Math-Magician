@@ -4,12 +4,16 @@
   box-sizing: border-box;
 }
 
+body {
+  height: auto;
+}
+
 .Calc-container {
   display: flex;
   flex-direction: column;
-  width: 45%;
-  height: 50vh;
-  margin: 25vh 25vw;
+  width: 40%;
+  height: 45vh;
+  margin: 20vh 20vw;
   box-shadow: 0 0 10px rgba(143, 133, 133, 0.726);
 }
 
@@ -64,4 +68,12 @@
 
 .row input:last-child {
   background-color: rgb(233, 174, 13);
+}
+
+.Quotes {
+  display: flex;
+  padding: 1% 20%;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+  color: rgb(0, 0, 0);
 }
