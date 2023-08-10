@@ -49,6 +49,7 @@ function RandomQuote() {
           {author && (
           <p>
             -
+            <br />
             {author}
           </p>
           )}
