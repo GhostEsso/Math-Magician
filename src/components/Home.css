@@ -1,0 +1,16 @@
+.Homepage {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px 25px;
+    font-family: sans-serif;
+  }
+  
+  .Homepage h1 {
+    font-size: 30px;
+    color: rgb(138, 11, 106);
+  }
+  
+  .Homepage p {
+    color: #fff;
+  }
