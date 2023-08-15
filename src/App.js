@@ -1,14 +1,10 @@
-import React from 'react';
+import { Route, Routes, Link } from 'react-router-dom';
+import './App.css';
 import Calculator from './components/Calculator';
 import RandomQuote from './components/RandomQuote';
 
-function App() {
-  return (
-    <div>
-      <Calculator />
-      <RandomQuote />
-    </div>
-  );
+const App = () => {
+
 }
 
 export default App;
