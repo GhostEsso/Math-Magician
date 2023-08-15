@@ -11,6 +11,12 @@ const Home = () => (
       ab et? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
       quod ut, eius consequuntur ex pariatur quasi totam aspernatur placeat quos
       itaque ipsa ratione provident! Illo totam laborum ipsa a veniam.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore
+      sapiente aperiam libero tempora autem aspernatur quibusdam mollitia
+      tempore iure facilis, fugit, rem amet. Delectus nam sit aspernatur illum
+      ab et? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
+      quod ut, eius consequuntur ex pariatur quasi totam aspernatur placeat quos
+      itaque ipsa ratione provident! Illo totam laborum ipsa a veniam.
     </p>
 
     <p className="secondparagraph">
@@ -21,6 +27,12 @@ const Home = () => (
       magnam, ratione, inventore facilis delectus impedit cum, rem debitis
       officia fugiat ex? Eligendi provident dolore exercitationem, nihil
       nostrum! Voluptates!
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore
+      sapiente aperiam libero tempora autem aspernatur quibusdam mollitia
+      tempore iure facilis, fugit, rem amet. Delectus nam sit aspernatur illum
+      ab et? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
+      quod ut, eius consequuntur ex pariatur quasi totam aspernatur placeat quos
+      itaque ipsa ratione provident! Illo totam laborum ipsa a veniam.
     </p>
   </section>
 );

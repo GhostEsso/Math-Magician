@@ -80,5 +80,7 @@ body {
 }
 
 .Calculator {
-  
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: larger;
+  padding: 50px;
 }
