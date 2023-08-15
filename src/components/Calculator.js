@@ -16,10 +16,13 @@ function Calculator() {
   };
 
   return (
-    <CalApp
-      val={val}
-      onButtonClick={handleCalculation}
-    />
+    <section className="Calculator">
+      <p>Let&apos;s do some math!</p>
+      <CalApp
+        val={val}
+        onButtonClick={handleCalculation}
+      />
+    </section>
   );
 }
 

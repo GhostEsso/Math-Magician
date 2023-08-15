@@ -72,8 +72,15 @@ body {
 
 .Quotes {
   display: flex;
+  margin-top: 15%;
   padding: 1% 20%;
   font-family: 'Courier New', Courier, monospace;
   font-size: large;
   color: rgb(0, 0, 0);
+}
+
+.Calculator {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: larger;
+  padding: 50px;
 }
