@@ -12,7 +12,7 @@ function CalApp({ val, onButtonClick }) {
   return (
     <section className="Calc-container">
       <div className="row">
-        <h2 className="input">{!total && !next && !operation ? 0 : `${total} ${operation} ${next}`}</h2>
+        <h2 className="input">{!total && !next && !operation ? 0 : `${total || ''} ${operation || ''} ${next || ''}`}</h2>
       </div>
       <div className="row">
         <input type="button" value="AC" onClick={calcs} />
