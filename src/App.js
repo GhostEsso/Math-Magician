@@ -1,25 +1,27 @@
-import { Route, Routes, Link } from 'react-router-dom';
 import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+
 import Calculator from './components/Calculator';
 import RandomQuote from './components/RandomQuote';
 import Home from './components/Home';
 
 const App = () => (
-  <>
+  <Router>
     <nav>
       <h1>Math Magicians</h1>
       <ul>
-        <li><Link exact to="/Home">Home</Link></li>
-        <li><Link exact to="/Calculator">Calculator</Link></li>
-        <li><Link exact to="/RandomQuote">Quote</Link></li>
+        <li><Link to="/Home">Home</Link></li>
+        <li><Link to="/Calculator">Calculator</Link></li>
+        <li><Link to="/RandomQuote">Quote</Link></li>
       </ul>
     </nav>
     <Routes>
-      <Route exact path="/Home" element={<Home />} />
-      <Route exact path="/Calculator" element={<Calculator />} />
-      <Route exact path="/RandomQuote" element={<RandomQuote />} />
+      <Route path="/Home" element={<Home />} />
+      <Route path="/Calculator" element={<Calculator />} />
+      <Route path="/RandomQuote" element={<RandomQuote />} />
     </Routes>
-  </>
+  </Router>
 );
 
 export default App;
