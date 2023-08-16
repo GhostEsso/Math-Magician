@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for RandomQuote component 1`] = `
+<div
+  className="Quotes"
+>
+  <p>
+    Loading ...
+  </p>
+</div>
+`;
