@@ -84,3 +84,20 @@ body {
   font-size: larger;
   padding: 50px;
 }
+
+@media (max-width: 768px) {
+  .Quotes {
+    flex-direction: column;
+    padding: 5% 10%;
+    margin-top: 10%;
+  }
+
+  .Calculator {
+    font-size: medium;
+    padding: 20px;
+  }
+}
+
+.Calc-container {
+  width: 75%;
+}

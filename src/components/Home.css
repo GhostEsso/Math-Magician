@@ -14,3 +14,18 @@
 .Homepage p {
   color: #000;
 }
+
+@media (max-width: 768px) {
+  .Homepage {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .Homepage h1 {
+    font-size: 24px;
+  }
+
+  .Homepage p {
+    font-size: 16px;
+  }
+}
