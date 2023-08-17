@@ -1,0 +1,6 @@
+services:
+  - name: web
+    plan: starter
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
