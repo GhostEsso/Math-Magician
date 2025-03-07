@@ -1,25 +1,47 @@
 body {
   color: white;
+  min-height: 100vh;
 }
 
 .quotes-container {
   max-width: 800px;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 1rem;
-  min-height: 300px;
+  height: calc(100vh - 200px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.quote-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
 .quote-card {
   background: white;
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 100%;
-  transition: opacity 0.5s ease;
+  max-width: 600px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-card::before {
+  content: '"';
+  position: absolute;
+  top: -0.2rem;
+  left: 1rem;
+  font-size: 6rem;
+  color: rgba(52, 152, 219, 0.1);
+  font-family: Georgia, serif;
 }
 
 .quote-card blockquote {
@@ -29,24 +51,7 @@ body {
   margin: 0 0 1.5rem 0;
   font-style: italic;
   position: relative;
-}
-
-.quote-card blockquote::before,
-.quote-card blockquote::after {
-  content: '"';
-  font-size: 3rem;
-  color: #3498db;
-  position: absolute;
-}
-
-.quote-card blockquote::before {
-  left: -1rem;
-  top: -1rem;
-}
-
-.quote-card blockquote::after {
-  right: -1rem;
-  bottom: -2rem;
+  z-index: 1;
 }
 
 .quote-card cite {
@@ -54,6 +59,20 @@ body {
   margin-top: 1.5rem;
   color: #7f8c8d;
   font-size: 1.1rem;
+  font-style: normal;
+  position: relative;
+  padding-top: 1rem;
+}
+
+.quote-card cite::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: rgba(52, 152, 219, 0.3);
 }
 
 .quote-controls {
@@ -127,25 +146,80 @@ body {
   background-color: #c0392b;
 }
 
-@media (max-width: 768px) {
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quote-card blockquote,
+.quote-card cite {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@media (max-width: 1024px) {
   .quotes-container {
-    margin: 1rem;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    min-height: 150px;
   }
 
   .quote-card {
     padding: 1.5rem;
+    margin: 0 0.5rem;
+  }
+
+  .quote-card::before {
+    font-size: 4rem;
+    top: -0.1rem;
+    left: 0.5rem;
   }
 
   .quote-card blockquote {
     font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
   }
 
-  .quote-controls {
-    flex-direction: column;
-    gap: 0.5rem;
+  .quote-card cite {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .quotes-container {
+    margin: 0.5rem auto;
   }
 
-  .quote-controls button {
-    width: 100%;
+  .quote-card {
+    padding: 1.2rem;
+    border-radius: 10px;
+  }
+
+  .quote-card::before {
+    font-size: 3rem;
+    top: -0.1rem;
+    left: 0.3rem;
+  }
+
+  .quote-card blockquote {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
+  }
+
+  .quote-card cite {
+    font-size: 0.9rem;
+    margin-top: 0.8rem;
+  }
+
+  .quote-card cite::before {
+    width: 30px;
   }
 }

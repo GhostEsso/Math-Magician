@@ -97,21 +97,40 @@ nav h1 {
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
-  padding: 5px;
-  z-index: 100;
+  padding: 8px;
+  z-index: 1001;
   margin-left: auto;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  position: relative;
 }
 
 .bar {
-  width: 25px;
-  height: 3px;
+  width: 100%;
+  height: 2px;
   background-color: white;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  border-radius: 2px;
+  position: absolute;
+}
+
+.bar:nth-child(1) {
+  top: 10px;
+}
+
+.bar:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bar:nth-child(3) {
+  bottom: 10px;
 }
 
 @media (max-width: 768px) {
   body {
-    padding-top: 4rem; /* Espace pour la navbar fixe */
+    padding-top: 3.5rem;
   }
 
   .nav-container {
@@ -119,13 +138,14 @@ nav h1 {
     top: 0;
     left: 0;
     right: 0;
-    padding: 0.8rem 1rem;
+    padding: 0.5rem 1rem;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: rgb(72, 72, 231);
   }
 
   .nav-container h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .hamburger {
@@ -135,13 +155,13 @@ nav h1 {
   .nav-links {
     display: none;
     position: fixed;
-    top: 3.6rem; /* Hauteur de la navbar */
+    top: 2.7rem;
     left: 0;
     right: 0;
     background-color: rgb(72, 72, 231);
     flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
+    padding: 0.8rem;
+    gap: 0.8rem;
     text-align: center;
     transform: translateY(-10px);
     opacity: 0;
@@ -158,19 +178,34 @@ nav h1 {
 
   .nav-links a {
     display: block;
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
+    font-size: 1.1rem;
+  }
+
+  .nav-links.active::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
   }
 
   .hamburger .bar.open:nth-child(1) {
-    transform: rotate(45deg) translate(7px, 7px);
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
   }
 
   .hamburger .bar.open:nth-child(2) {
     opacity: 0;
+    transform: translateX(20px);
   }
 
   .hamburger .bar.open:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
   }
 }
 

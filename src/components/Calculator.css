@@ -11,17 +11,19 @@ body {
 .Calc-container {
   display: flex;
   flex-direction: column;
-  width: 40%;
-  height: 45vh;
-  margin: 20vh 20vw;
+  width: 100%;
+  max-width: 500px;
+  margin: 1rem auto;
   box-shadow: 0 0 10px rgba(143, 133, 133, 0.726);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .row {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  height: 100%;
+  height: 70px;
 }
 
 .row input[type="button"] {
@@ -29,6 +31,13 @@ body {
   border: 0.5px solid rgb(193, 207, 216);
   color: #050000;
   font-weight: 600;
+  font-size: 1.4rem;
+  background-color: #fff;
+  transition: background-color 0.2s;
+}
+
+.row input[type="button"]:active {
+  background-color: #e0e0e0;
 }
 
 .input::-webkit-outer-spin-button,
@@ -40,22 +49,21 @@ body {
 .Calc-container .input {
   background-color: rgb(216, 88, 88);
   width: 100%;
+  height: 90px;
   border: none;
   outline: none;
-  font-size: 27px;
-  text-indent: 5px;
+  font-size: 2.2rem;
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: right;
-
-  /* text-align: right; */
-  padding-right: 5px;
+  justify-content: flex-end;
+  padding: 0 1rem;
 }
 
 .last-row {
   display: flex;
   flex-direction: row;
+  height: 60px;
 }
 
 .last-row input[type="button"]:first-child {
@@ -68,6 +76,7 @@ body {
 
 .row input:last-child {
   background-color: rgb(233, 174, 13);
+  color: white;
 }
 
 .Quotes {
@@ -98,10 +107,6 @@ body {
   }
 }
 
-.Calc-container {
-  width: 75%;
-}
-
 .calculator-page {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -115,12 +120,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .calculator-section h2 {
   color: #2c3e50;
   margin-bottom: 2rem;
   font-size: 1.8rem;
+  text-align: center;
 }
 
 .quote-section {
@@ -139,10 +146,40 @@ body {
 @media (max-width: 1024px) {
   .calculator-page {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
+    padding: 1rem;
   }
 
   .quote-section {
-    order: -1; /* Place les citations au-dessus de la calculatrice sur mobile */
+    order: -1;
+  }
+
+  .calculator-section {
+    padding: 0;
+  }
+
+  .calculator-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .Calc-container {
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  .row,
+  .last-row {
+    height: 50px;
+  }
+
+  .Calc-container .input {
+    height: 70px;
+    font-size: 1.8rem;
+  }
+
+  .row input[type="button"] {
+    font-size: 1.1rem;
+    padding: 0;
   }
 }

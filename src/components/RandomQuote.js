@@ -50,19 +50,18 @@ function RandomQuote() {
     return MATH_QUOTES[randomIndex];
   });
 
-  const getNewQuote = () => {
-    let newIndex;
-    do {
-      newIndex = Math.floor(Math.random() * MATH_QUOTES.length);
-    } while (MATH_QUOTES[newIndex].quote === currentQuote.quote);
-
-    setCurrentQuote(MATH_QUOTES[newIndex]);
-  };
-
   useEffect(() => {
+    const getNewQuote = () => {
+      let newIndex;
+      do {
+        newIndex = Math.floor(Math.random() * MATH_QUOTES.length);
+      } while (MATH_QUOTES[newIndex].quote === currentQuote.quote);
+      setCurrentQuote(MATH_QUOTES[newIndex]);
+    };
+
     const intervalId = setInterval(getNewQuote, 10000);
     return () => clearInterval(intervalId);
-  }, []);
+  }, [currentQuote]);
 
   return (
     <div className="quotes-container">
