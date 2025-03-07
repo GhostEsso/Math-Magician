@@ -101,3 +101,48 @@ body {
 .Calc-container {
   width: 75%;
 }
+
+.calculator-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.calculator-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calculator-section h2 {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.quote-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Styles existants pour la calculatrice */
+.Calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .calculator-page {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .quote-section {
+    order: -1; /* Place les citations au-dessus de la calculatrice sur mobile */
+  }
+}

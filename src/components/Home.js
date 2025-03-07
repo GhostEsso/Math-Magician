@@ -1,40 +1,44 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/jsx-no-comment-textnodes */
 import './Home.css';
 import React from 'react';
 
 function Home() {
   return (
     <section className="Homepage">
-      <h1> Welcome to our page!</h1>
-      <p className="firstparagraph">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore
-        sapiente aperiam libero tempora autem aspernatur quibusdam mollitia
-        tempore iure facilis, fugit, rem amet. Delectus nam sit aspernatur illum
-        ab et? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
-        quod ut, eius consequuntur ex pariatur quasi totam aspernatur placeat quos
-        itaque ipsa ratione provident! Illo totam laborum ipsa a veniam.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore
-        sapiente aperiam libero tempora autem aspernatur quibusdam mollitia
-        tempore iure facilis, fugit, rem amet. Delectus nam sit aspernatur illum
-        ab et? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
-        quod ut, eius consequuntur ex pariatur quasi totam aspernatur placeat quos
-        itaque ipsa ratione provident! Illo totam laborum ipsa a veniam.
-      </p>
+      <div className="hero-section">
+        <h1>Bienvenue sur Math Magicians</h1>
+        <p className="tagline">Votre assistant mathématique intelligent</p>
+      </div>
 
-      <p className="secondparagraph">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nam
-        officiis, id officia totam tenetur illo dolores magnam. Sapiente tempore
-        cum voluptate praesentium veritatis deserunt placeat ex iure nemo ipsum.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi est quia
-        magnam, ratione, inventore facilis delectus impedit cum, rem debitis
-        officia fugiat ex? Eligendi provident dolore exercitationem, nihil
-        nostrum! Voluptates!
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore
-        sapiente aperiam libero tempora autem aspernatur quibusdam mollitia
-        tempore iure facilis, fugit, rem amet. Delectus nam sit aspernatur illum
-        ab et? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
-        quod ut, eius consequuntur ex pariatur quasi totam aspernatur placeat quos
-        itaque ipsa ratione provident! Illo totam laborum ipsa a veniam.
-      </p>
+      <div className="features-section">
+        <div className="feature-card">
+          <h2>Calculatrice Avancée</h2>
+          <p>
+            Accédez à notre calculatrice intuitive et puissante pour résoudre vos calculs
+            mathématiques. Parfaite pour les étudiants, professionnels et tous ceux qui
+            ont besoin d'un outil de calcul fiable.
+          </p>
+        </div>
+
+        <div className="feature-card">
+          <h2>Citations Inspirantes</h2>
+          <p>
+            Découvrez des citations inspirantes de mathématiciens célèbres et de penseurs
+            qui ont façonné le monde des mathématiques. Une dose quotidienne de motivation
+            et de sagesse mathématique.
+          </p>
+        </div>
+      </div>
+
+      <div className="cta-section">
+        <p>
+          Math Magicians combine la puissance des mathématiques avec une interface moderne
+          et conviviale. Que vous soyez étudiant, enseignant ou professionnel, nos outils
+          sont conçus pour répondre à vos besoins quotidiens en calculs et en inspiration
+          mathématique.
+        </p>
+      </div>
     </section>
   );
 }

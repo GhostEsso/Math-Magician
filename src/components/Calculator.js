@@ -2,6 +2,7 @@ import './Calculator.css';
 import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 import CalApp from './CallApp';
+import RandomQuote from './RandomQuote';
 
 function Calculator() {
   const [val, setVal] = useState({
@@ -16,12 +17,17 @@ function Calculator() {
   };
 
   return (
-    <section className="Calculator">
-      <p>Let&apos;s do some math!</p>
-      <CalApp
-        val={val}
-        onButtonClick={handleCalculation}
-      />
+    <section className="calculator-page">
+      <div className="calculator-section">
+        <h2>Let&apos;s do some math!</h2>
+        <CalApp
+          val={val}
+          onButtonClick={handleCalculation}
+        />
+      </div>
+      <div className="quote-section">
+        <RandomQuote />
+      </div>
     </section>
   );
 }

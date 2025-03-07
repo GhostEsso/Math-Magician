@@ -1,3 +1,151 @@
 body {
   color: white;
 }
+
+.quotes-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  transition: opacity 0.5s ease;
+}
+
+.quote-card blockquote {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  font-style: italic;
+  position: relative;
+}
+
+.quote-card blockquote::before,
+.quote-card blockquote::after {
+  content: '"';
+  font-size: 3rem;
+  color: #3498db;
+  position: absolute;
+}
+
+.quote-card blockquote::before {
+  left: -1rem;
+  top: -1rem;
+}
+
+.quote-card blockquote::after {
+  right: -1rem;
+  bottom: -2rem;
+}
+
+.quote-card cite {
+  display: block;
+  margin-top: 1.5rem;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+.quote-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.quote-controls button {
+  padding: 0.8rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.quote-controls button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.quote-controls button.active {
+  background-color: #e74c3c;
+}
+
+.quote-controls button.active:hover {
+  background-color: #c0392b;
+}
+
+.loading-spinner {
+  text-align: center;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  text-align: center;
+  color: #e74c3c;
+  padding: 1rem;
+}
+
+.error-message button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error-message button:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .quotes-container {
+    margin: 1rem;
+  }
+
+  .quote-card {
+    padding: 1.5rem;
+  }
+
+  .quote-card blockquote {
+    font-size: 1.2rem;
+  }
+
+  .quote-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .quote-controls button {
+    width: 100%;
+  }
+}

@@ -54,3 +54,129 @@ nav h1 {
     font-size: 30px;
   }
 }
+
+.nav-container {
+  background-color: rgb(72, 72, 231);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.nav-container h1 {
+  color: white;
+  margin: 0;
+  font-size: 2.5rem;
+  font-family: sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: rgb(34, 201, 230);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 100;
+  margin-left: auto;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 4rem; /* Espace pour la navbar fixe */
+  }
+
+  .nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.8rem 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 3.6rem; /* Hauteur de la navbar */
+    left: 0;
+    right: 0;
+    background-color: rgb(72, 72, 231);
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    text-align: center;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.active {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .hamburger .bar.open:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .hamburger .bar.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger .bar.open:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+}
+
+/* Ajustements pour le contenu principal */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
